@@ -129,9 +129,18 @@ def explain(data):
 # =====================================================
 
 @app.route("/")
-def home():
+def dashboard():
+    return render_template("dashboard.html")
+
+
+@app.route("/prediction")
+def prediction_page():
     return render_template("index.html")
 
+
+@app.route("/dashboard")
+def dashboard_redirect():
+    return render_template("dashboard.html")
 
 # =====================================================
 # Prediction API

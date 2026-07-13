@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BNPL Power BI Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+        }
+
+        .header {
+            padding: 18px 28px;
+            background: #0f4c81;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav {
+            padding: 12px 28px;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav a {
+            color: #0f4c81;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .dashboard-container {
+            width: 100%;
+            height: calc(100vh - 105px);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        BNPL Credit Risk Decision Support System
+    </div>
+
+    <div class="nav">
+        <a href="/">Power BI Dashboard</a>
+        <a href="/prediction">Prediction App</a>
+    </div>
+
+    <div class="dashboard-container">
+        <iframe 
+            title="BNPL Power BI Dashboard"
+            src="https://app.powerbi.com/view?r=eyJrIjoiNWE1ZTRkMDYtNmJmNC00MTg5LWI1Y2UtMmNkZGUyY2RiNzdmIiwidCI6Ijk5ZWViMDA5LWU3YTItNDdiNi05ZGVkLTAyOGNkY2MzMDBlNiIsImMiOjEwfQ%3D%3D"
+            allowFullScreen="true">
+        </iframe>
+    </div>
+
+</body>
+
+</html>

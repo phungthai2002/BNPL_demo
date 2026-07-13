@@ -153,3 +153,10 @@ grid-template-columns:1fr;
 }
 
 }
+.dashboard-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0f4c81;
+    font-weight: bold;
+    text-decoration: none;
+}
