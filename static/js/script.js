@@ -7,7 +7,6 @@ const predictionText = document.getElementById("predictionText");
 const probability = document.getElementById("probability");
 const riskLevel = document.getElementById("riskLevel");
 const recommendedAction = document.getElementById("recommendedAction");
-const explanationList = document.getElementById("explanationList");
 
 form.addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -20,7 +19,6 @@ form.addEventListener("submit", async function (e) {
         credit_score: Number(document.getElementById("credit_score").value),
         monthly_income: Number(document.getElementById("monthly_income").value),
         purchase_amount: Number(document.getElementById("purchase_amount").value),
-        // debt_to_income_ratio: Number(document.getElementById("debt_to_income_ratio").value),
         employment_type: document.getElementById("employment_type").value,
         bnpl_installments: Number(document.getElementById("bnpl_installments").value)
     };
@@ -44,7 +42,7 @@ form.addEventListener("submit", async function (e) {
             probability.innerHTML = "--";
             riskLevel.innerHTML = "--";
             recommendedAction.innerHTML = "--";
-            explanationList.innerHTML = `<li>${res.error || "Unknown error"}</li>`;
+
             console.error("Prediction error:", res);
             return;
         }
@@ -64,14 +62,6 @@ form.addEventListener("submit", async function (e) {
             riskLevel.classList.add("high");
         }
 
-        explanationList.innerHTML = "";
-
-        res.explanation.forEach(item => {
-            const li = document.createElement("li");
-            li.textContent = item;
-            explanationList.appendChild(li);
-        });
-
     } catch (error) {
         loading.style.display = "none";
         result.style.display = "block";
@@ -80,8 +70,7 @@ form.addEventListener("submit", async function (e) {
         probability.innerHTML = "--";
         riskLevel.innerHTML = "--";
         recommendedAction.innerHTML = "--";
-        explanationList.innerHTML = "<li>Cannot connect to Flask server.</li>";
 
-        console.error(error);
+        console.error("Frontend error:", error);
     }
 });
