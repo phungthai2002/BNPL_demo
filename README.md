@@ -46,7 +46,7 @@ The application returns:
 - A **Low / Medium / High Risk** category
 - A **suggested action** based on probability thresholds
 
-| Estimated default probability | Risk level | Suggested action |
+| Estimated Default Probability | Risk Level | Suggested Action |
 | --- | --- | --- |
 | Below 30% | Low Risk | Approve |
 | 30% to below 60% | Medium Risk | Review |
@@ -114,34 +114,73 @@ Clone the repository and enter its root directory:
 ```bash
 git clone https://github.com/phungthai2002/BNPL_demo.git
 cd BNPL_demo
+```
 
-## Create and activate a virtual environment:
+### Create and Activate a Virtual Environment
+
+```bash
 python -m venv .venv
+```
 
-## macOS / Linux
+#### macOS / Linux
+
+```bash
 source .venv/bin/activate
+```
 
-## Windows PowerShell
+#### Windows PowerShell
+
+```powershell
 .venv\Scripts\Activate.ps1
+```
 
-## Install the dependencies:
+### Install the Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-## Start the development server:
+### Start the Development Server
+
+```bash
 python app.py
+```
 
-## Open the following URLs in your browser:
+### Open the Application
+
+Open the following URLs in your browser:
+
 - Dashboard: http://127.0.0.1:5000/
 - Prediction app: http://127.0.0.1:5000/prediction
+
 Run commands from the repository root because the application loads model files through relative paths.
 
 ## Render Deployment
-The live demo is deployed on Render. **[Live Demo](https://bnpl-demo.onrender.com/)**
 
-## Build Command
+The live demo is deployed on Render:
+
+**[Open the Live Demo](https://bnpl-demo.onrender.com/)**
+
+### Build Command
+
+```bash
 pip install -r requirements.txt
+```
 
-## Start Command
+### Start Command
+
+```bash
 gunicorn app:app --bind 0.0.0.0:$PORT
+```
 
-The model files must be available in the models/ directory. The Power BI dashboard also depends on the externally hosted Power BI report.
+The model files must be available in the `models/` directory. The Power BI dashboard also depends on the externally hosted Power BI report.
+
+
+<img width="3840" height="1784" alt="image" src="https://github.com/user-attachments/assets/801c52ef-abcf-4454-993a-975662714894" />
+<img width="3840" height="1782" alt="image" src="https://github.com/user-attachments/assets/b1ce130b-1e38-43f4-a9c9-b9cd5df11105" />
+<img width="3840" height="1782" alt="image" src="https://github.com/user-attachments/assets/eb6c6f5c-9092-4e39-88e7-4216f6ece432" />
+<img width="3840" height="1890" alt="image" src="https://github.com/user-attachments/assets/2db92171-655e-4ebd-b743-2c2bcac40317" />
+
+
+
+
