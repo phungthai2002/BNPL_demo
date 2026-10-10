@@ -2,9 +2,7 @@
 
 A FinTech portfolio project that combines **Power BI analytics** with a **machine learning prediction app** to explore credit risk in Buy Now Pay Later (BNPL) transactions.
 
-The project connects portfolio-level analysis with individual customer assessment. Users can explore risk patterns in an interactive dashboard, then enter a customer and purchase profile to obtain an estimated default probability, risk category, and suggested review action.
-
-**[Live Demo](https://bnpl-demo.onrender.com/)** · **[Prediction App](https://bnpl-demo.onrender.com/prediction)**
+**[Live Demo](https://bnpl-demo.onrender.com/)**
 
 ## Project Motivation
 
