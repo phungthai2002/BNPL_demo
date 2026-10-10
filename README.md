@@ -114,3 +114,34 @@ Clone the repository and enter its root directory:
 ```bash
 git clone https://github.com/phungthai2002/BNPL_demo.git
 cd BNPL_demo
+
+## Create and activate a virtual environment:
+python -m venv .venv
+
+## macOS / Linux
+source .venv/bin/activate
+
+## Windows PowerShell
+.venv\Scripts\Activate.ps1
+
+## Install the dependencies:
+pip install -r requirements.txt
+
+## Start the development server:
+python app.py
+
+## Open the following URLs in your browser:
+- Dashboard: http://127.0.0.1:5000/
+- Prediction app: http://127.0.0.1:5000/prediction
+Run commands from the repository root because the application loads model files through relative paths.
+
+## Render Deployment
+The live demo is deployed on Render. **[Live Demo](https://bnpl-demo.onrender.com/)**
+
+## Build Command
+pip install -r requirements.txt
+
+## Start Command
+gunicorn app:app --bind 0.0.0.0:$PORT
+
+The model files must be available in the models/ directory. The Power BI dashboard also depends on the externally hosted Power BI report.
